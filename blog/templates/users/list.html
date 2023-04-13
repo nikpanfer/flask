@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+User list
+{% endblock %}
+
+{% block body %}
+<ul>
+    {% for user in users %}
+    <li><a href="{{url_for('user_blueprint.get_user', pk=user)}}">{{users[user]}}</a></li>
+    {% endfor %}
+</ul>
+
+{%endblock %}
